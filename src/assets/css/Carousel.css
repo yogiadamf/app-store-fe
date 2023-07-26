@@ -1,0 +1,15 @@
+.img-carousel {
+    height: 400px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.slick-dots li button:before {
+    color: white !important;
+}
+
+@media screen and (max-width: 899px) {
+    .img-carousel{
+        height: 100px;
+    }
+}
