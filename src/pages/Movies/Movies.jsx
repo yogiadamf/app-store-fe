@@ -1,5 +1,5 @@
 import React from "react";
-import DocumentTitle from "../../components/DocumentTitle";
+import DocumentTitle from "../../hooks/DocumentTitle";
 import Content from "../../components/navigation/Content";
 
 const Movies = () => {

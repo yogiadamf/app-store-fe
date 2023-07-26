@@ -2,28 +2,33 @@ import React from "react";
 import { motion } from "framer-motion";
 import { IconStarFilled } from "@tabler/icons-react";
 import Content from "../../components/navigation/Content";
-import DocumentTitle from "../../components/DocumentTitle";
+import DocumentTitle from "../../hooks/DocumentTitle";
 import TopList from "../../components/TopList";
-import Carousel from "../../components/Carousel"
+import Carousel from "../../components/Carousel";
+
 import "./Home.css";
 
 const Home = () => {
   DocumentTitle("Home");
-  const dataImage = [
+  const dataImage = [    
     {
       id: "image-1",
+      title: "EA FC 2024",
+      subtitle: "New game pass xbox 1",
       pathURL:
-        "https://cdn.wallpapersafari.com/57/61/A51OwL.jpg",
+        "https://prod.assets.earlygamecdn.com/images/EA-FC-24-Beta.jpg?mtime=1688119906",
     },
     {
       id: "image-2",
-      pathURL:
-        "https://wallpapercave.com/wp/wp8830740.jpg",
+      title: "Game pass 2",
+      subtitle: "New game pass xbox 2",
+      pathURL: "https://wallpapercave.com/wp/wp8830740.jpg",
     },
     {
       id: "image-3",
-      pathURL:
-        "https://ffa.hr/wp-content/uploads/2020/10/game-pass.jpg",
+      title: "Game pass 3",
+      subtitle: "New game pass xbox 3",
+      pathURL: "https://ffa.hr/wp-content/uploads/2020/10/game-pass.jpg",
     },
   ];
   const dataTopApps = [
@@ -97,18 +102,28 @@ const Home = () => {
       pathURL:
         "https://cdn.icon-icons.com/icons2/3041/PNG/512/tiktok_logo_icon_189233.png",
     },
-  ];
+  ];  
   return (
     <Content>
-      <div className="container">
+      <div className="container">      
         <Carousel>
-        {dataImage.map((data, key) => {
-          return (
-            <div key={key}>              
-              <img src={data.pathURL} className="img-carousel" alt={data.id}/>
-            </div>
-          );
-        })}
+          {dataImage.map((data, key) => {
+            return (
+              <div key={key}>
+                <div className="card-carousel">
+                  <img
+                    src={data.pathURL}
+                    className="card-carousel-image"
+                    alt={data.id}
+                  />
+                  <div className="card-carousel-text">                    
+                    <span>{data.title}</span>
+                    <span>{data.subtitle}</span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </Carousel>
         <TopList title="Top Free Apps" url="apps/top-free-apps">
           {dataTopApps.map((data, key) => {
