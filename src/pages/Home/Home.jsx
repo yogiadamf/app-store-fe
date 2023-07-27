@@ -1,34 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { IconStarFilled } from "@tabler/icons-react";
+import { IconChevronRight, IconStarFilled } from "@tabler/icons-react";
 import Content from "../../components/navigation/Content";
 import DocumentTitle from "../../hooks/DocumentTitle";
 import TopList from "../../components/TopList";
 import Carousel from "../../components/Carousel";
 
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   DocumentTitle("Home");
-  const dataImage = [    
+  const dataImage = [
     {
       id: "image-1",
       title: "EA FC 2024",
-      subtitle: "New game pass xbox 1",
+      subtitle: "The EA SPORTS FC platform is home to the biggest competitions, leagues, and players across the men's and women's game.",
       pathURL:
         "https://prod.assets.earlygamecdn.com/images/EA-FC-24-Beta.jpg?mtime=1688119906",
     },
     {
       id: "image-2",
-      title: "Game pass 2",
-      subtitle: "New game pass xbox 2",
-      pathURL: "https://wallpapercave.com/wp/wp8830740.jpg",
+      title: "PUBG: BATTLEGROUNDS",
+      subtitle: "Battle royale that pits 100 players against each other. Outplay your opponents to become the lone survivor.",
+      pathURL: "https://www.telkomsel.com/sites/default/files/2023-03/929%20D.png",
     },
     {
       id: "image-3",
-      title: "Game pass 3",
-      subtitle: "New game pass xbox 3",
-      pathURL: "https://ffa.hr/wp-content/uploads/2020/10/game-pass.jpg",
+      title: "Call of Duty®: Black Ops ",
+      subtitle: "The biggest action series of all time returns. Call of Duty®: Black Ops",
+      pathURL: "https://www.nyk.co.id/wp-content/uploads/2019/05/Bo4_XboxWire_Hero.Large_-hero.jpg",
     },
   ];
   const dataTopApps = [
@@ -102,10 +103,10 @@ const Home = () => {
       pathURL:
         "https://cdn.icon-icons.com/icons2/3041/PNG/512/tiktok_logo_icon_189233.png",
     },
-  ];  
+  ];
   return (
     <Content>
-      <div className="container">      
+      <div className="container">
         <Carousel>
           {dataImage.map((data, key) => {
             return (
@@ -116,9 +117,12 @@ const Home = () => {
                     className="card-carousel-image"
                     alt={data.id}
                   />
-                  <div className="card-carousel-text">                    
+                  <div className="card-carousel-text">
                     <span>{data.title}</span>
                     <span>{data.subtitle}</span>
+                    <Link to={data.id} className="card-carousel-link">
+                      <IconChevronRight size={18} /> See Details
+                    </Link>
                   </div>
                 </div>
               </div>

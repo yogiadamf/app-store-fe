@@ -7,18 +7,20 @@
 .slick-dots li button:before {
     color: white !important;
 }
+
 .card-carousel {
     position: relative;
-    overflow: hidden;    
+    overflow: hidden;
     border-radius: 5px;
     height: 400px;
+    background: #000;
 }
 
 .card-carousel-image {
     position: absolute;
     top: 0;
     right: 0;
-    width: 75%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -28,8 +30,9 @@
 
 .card-carousel-text {
     position: relative;
+    padding: 30px;
     z-index: 2;
-    max-width: 75%;
+    max-width: 25%;
     display: flex;
     flex-direction: column;
 }
@@ -43,9 +46,27 @@
 .card-carousel-text span:last-child {
     opacity: 0.7;
 }
+.card-carousel-link{
+    margin-top: 20px;
+    width: 100px;
+    display: flex;        
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 @media screen and (max-width: 899px) {
-    .card-carousel{
-        height: 100px;
+    .card-carousel {
+        height: 200px;
+    }
+    .card-carousel-image {
+        height: 100%;
+    }
+    .card-carousel-text {
+        max-width: 50%;        
     }
 }
