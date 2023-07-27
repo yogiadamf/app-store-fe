@@ -8,6 +8,8 @@ import Carousel from "../../components/Carousel";
 
 import "./Home.css";
 import { Link } from "react-router-dom";
+import EssentialList from "../../components/EssentialList";
+import CardApps from "../../components/CardApps";
 
 const Home = () => {
   DocumentTitle("Home");
@@ -15,21 +17,26 @@ const Home = () => {
     {
       id: "image-1",
       title: "EA FC 2024",
-      subtitle: "The EA SPORTS FC platform is home to the biggest competitions, leagues, and players across the men's and women's game.",
+      subtitle:
+        "The EA SPORTS FC platform is home to the biggest competitions, leagues, and players across the men's and women's game.",
       pathURL:
         "https://prod.assets.earlygamecdn.com/images/EA-FC-24-Beta.jpg?mtime=1688119906",
     },
     {
       id: "image-2",
       title: "PUBG: BATTLEGROUNDS",
-      subtitle: "Battle royale that pits 100 players against each other. Outplay your opponents to become the lone survivor.",
-      pathURL: "https://www.telkomsel.com/sites/default/files/2023-03/929%20D.png",
+      subtitle:
+        "Battle royale that pits 100 players against each other. Outplay your opponents to become the lone survivor.",
+      pathURL:
+        "https://www.telkomsel.com/sites/default/files/2023-03/929%20D.png",
     },
     {
       id: "image-3",
       title: "Call of Duty®: Black Ops ",
-      subtitle: "The biggest action series of all time returns. Call of Duty®: Black Ops",
-      pathURL: "https://www.nyk.co.id/wp-content/uploads/2019/05/Bo4_XboxWire_Hero.Large_-hero.jpg",
+      subtitle:
+        "The biggest action series of all time returns. Call of Duty®: Black Ops",
+      pathURL:
+        "https://www.nyk.co.id/wp-content/uploads/2019/05/Bo4_XboxWire_Hero.Large_-hero.jpg",
     },
   ];
   const dataTopApps = [
@@ -104,6 +111,32 @@ const Home = () => {
         "https://cdn.icon-icons.com/icons2/3041/PNG/512/tiktok_logo_icon_189233.png",
     },
   ];
+  const dataBestGames = [
+    {
+      link: "https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      title: "EA FC 2024",
+      rating: "4.3",
+      tags: "Free",
+    },
+    {
+      link: "https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      title: "EA FC 2024",
+      rating: "4.3",
+      tags: "Free",
+    },
+    {
+      link: "https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      title: "EA FC 2024",
+      rating: "4.3",
+      tags: "Free",
+    },
+    {
+      link: "https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      title: "EA FC 2024",
+      rating: "4.3",
+      tags: "Free",
+    },
+  ];
   return (
     <Content>
       <div className="container">
@@ -159,6 +192,23 @@ const Home = () => {
             );
           })}
         </TopList>
+        <EssentialList
+          src="https://img.freepik.com/free-photo/futuristic-background-with-colorful-glowing-abstract-neon-lights_181624-26329.jpg"
+          title="Featured Free Games"
+          subtitle="Explore free fun to play games and find a new favorite"
+        >
+          {dataBestGames.map((data, key) => {
+            return (
+              <CardApps
+                key={key}
+                src={data.link}
+                title={data.title}
+                rating={data.rating}
+                tags={data.tags}
+              />
+            );
+          })}
+        </EssentialList>
       </div>
     </Content>
   );
