@@ -10,6 +10,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import EssentialList from "../../components/EssentialList";
 import CardApps from "../../components/CardApps";
+import CardGames from "../../components/CardGames";
 
 const Home = () => {
   DocumentTitle("Home");
@@ -209,6 +210,9 @@ const Home = () => {
             );
           })}
         </EssentialList>
+        <TopList title="Top Best Games" url="apps/top-free-apps">
+          <CardGames />
+        </TopList>
       </div>
     </Content>
   );

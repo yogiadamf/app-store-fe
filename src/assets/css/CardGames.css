@@ -1,0 +1,30 @@
+.card-games-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card-games {        
+    width: 300px;    
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #000;    
+}
+
+.card-games-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+
+.card-games-footer {    
+    position: absolute;
+    align-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;    
+    backdrop-filter: blur(10px);
+    height: 30%;
+    border-radius: 0 0 5px 5px;    
+}
