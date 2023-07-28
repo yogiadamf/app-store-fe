@@ -6,12 +6,12 @@ const CardGames = () => {
     <div className="card-games-container">
       <Link to="#" className="card-games">
         <img
-          src="https://images.unsplash.com/photo-1526297003708-f5a1c2c9c6e7?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI0OTY1ODM&ixlib=rb-1.2.1&q=80"
-          alt="balloon with an emoji face"
+          src="https://store-images.s-microsoft.com/image/apps.29548.13510798885034953.71bce0fd-7d3d-43b1-a6ff-ffe511aec3a6.e680c140-4d1c-483a-8954-5f6b139ce0ed?mode=scale&q=90&h=225&w=150"
+          alt="card-games-img"
           className="card-games-img"
         />
         <div className="card-games-footer">
-          <h2>Awesome speedy card</h2>          
+          <h2>March of Empires: War of Lords</h2>
         </div>
       </Link>
     </div>
